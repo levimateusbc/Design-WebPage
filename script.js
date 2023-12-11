@@ -12,6 +12,8 @@ const box1 = document.querySelector(".section-premium .pointer");
 const box2 = document.querySelector(".section-premium .pointer2");
 const box3 = document.querySelector(".section-premium .pointer3");
 const boxGeneral = document.querySelector(".section-premium .sliders");
+const title = document.querySelector(".active");
+
 
 const Put = (arg1, arg2, arg3) => {
   arg1.classList.add("active");
@@ -61,3 +63,19 @@ box3.addEventListener("click", () => {
   boxGeneral.style.marginLeft = "-200vw";
   Put(box3, box2, box1);
 });
+// doing the title with prevent default.
+// title.addEventListener("click", () =>{
+//   title.style.borderBottom = "5px solid #6441a5"
+//    event.preventDefault()
+// })
+// Suponha que você tenha uma lista de links com a classe "link"
+var links = document.querySelectorAll('.link');
+
+// Adicione um event listener para cada link
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', function(event) {
+  title.style.borderBottom = "5px solid #6441a5"
+  event.preventDefault();
+
+  });
+}

@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -58,7 +62,10 @@ header {
   height: 100px;
   display: flex;
   align-items: center;
-  border-bottom: 5px solid #000;
+}
+
+.link a.selected {
+  border-bottom: 5px solid #6441a5;
 }
 
 .button {
@@ -838,6 +845,10 @@ CSS DE ÁREAS ESPECÍFICAS
     border: 0;
     color: #6441a5;
   }
+  .click-active {
+    background: pink !important;
+  }
+
 
   .section-aboutus {
     flex-direction: column;
@@ -934,11 +945,6 @@ CSS DE ÁREAS ESPECÍFICAS
     margin-left: 30px;
     border: 0;
   }
-  .menu li.active a {
-    border: 0;
-    color: #6441a5;
-  }
-
   .banner h1 {
     font-size: 30px;
   }

@@ -69,13 +69,19 @@ box3.addEventListener("click", () => {
 //    event.preventDefault()
 // })
 // Suponha que você tenha uma lista de links com a classe "link"
-var links = document.querySelectorAll('.link');
+var links = document.querySelectorAll('.link a');
 
-// Adicione um event listener para cada link
 for (var i = 0; i < links.length; i++) {
   links[i].addEventListener('click', function(event) {
-  title.style.borderBottom = "5px solid #6441a5"
-  event.preventDefault();
+    // Remove a marcação de todos os links
+    for (var j = 0; j < links.length; j++) {
+      links[j].classList.remove('selected');
+    }
 
+    // Adiciona a marcação apenas ao link clicado
+    this.classList.add('selected');
+
+    // event.preventDefault();
   });
 }
+
